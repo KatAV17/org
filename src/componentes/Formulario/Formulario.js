@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./Formulario.css"
-import CampoTexto from "../CampoTexto"
+import CampoTexto from "../Campo"
 import ListaOpciones from "../ListaOpciones"
 import Boton from "../Boton"
 
@@ -76,6 +76,7 @@ const Formulario = (props) => {
                 placeholder='Ingresar color Hex'
                 required valor={color}
                 actualizarValor={actualizarColor}
+                type="color"
             />
             <Boton>Registrar Equipo</Boton>
         </form>
