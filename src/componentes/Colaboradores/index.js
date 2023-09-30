@@ -1,11 +1,13 @@
 import "./Colaboradores.css"
+import { AiOutlineUsergroupDelete } from "react-icons/ai"
 
 const Colaborador = (props) => {
 
-    const { nombre, puesto, foto, equipo } = props.datos
-    const { colorPrimario } = props
+    const { nombre, puesto, foto } = props.datos
+    const { colorPrimario, eliminarColaborador } = props
 
     return <div className="colaborador">
+        <AiOutlineUsergroupDelete onClick={eliminarColaborador} className="eliminar" />
         <div className="encabezado" style={ { backgroundColor: colorPrimario } }>
             <img src={ foto } alt={ nombre }/>
         </div>
